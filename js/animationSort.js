@@ -315,7 +315,7 @@ else if (typeof define === 'function' && define.amd) {
 
  var array = [6,8,3,21,18,13,6,5,9,8,10], t = new drawSortProcess("animationSort",array);
 
-document.getElementById("value").innerHTML = t.getArray();
+
 
 //按钮事件
 var next = document.getElementById("next");
@@ -329,11 +329,13 @@ if(window.attachEvent){
     next.attachEvent("onclick", function(){
         t.beginAnimation();
         t.setLockAnimation("next");
+        document.getElementById("value").innerHTML = t.getArray();
     });
     play.attachEvent("onclick", function(){
         t.beginAnimation();
         t.setAutoPlay();
         play.innerHTML == "开始"? play.innerHTML ="暂停":  play.innerHTML ="开始";
+        document.getElementById("value").innerHTML = t.getArray();
     });
  
    setTime.attachEvent("onclick", function(){
@@ -348,11 +350,13 @@ if(window.attachEvent){
     next.addEventListener("click", function(){
         t.beginAnimation();
         t.setLockAnimation("next");
+        document.getElementById("value").innerHTML = t.getArray();
     });
     play.addEventListener("click", function(){
         t.beginAnimation();
         t.setAutoPlay();
         play.innerHTML == "开始"? play.innerHTML ="暂停":  play.innerHTML ="开始";
+        document.getElementById("value").innerHTML = t.getArray();
     });
  
     setTime.addEventListener("click", function(){
