@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>快速排序思路及动画演示过程</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+     
+</head>
+<body>
+    
+    <h2>快速排序的思路</h2>
+    <div class="content">
+        <ul>
+            <li>1.先从后向前查找小于当前key值的数字b，查找到则将数字b移动到当前key值的位置，此时在当前循环暂停，新增一个循环</li>
+            <li>2.新增循环从key值的下一位向前继续查找到数字b位置，查找是否有大于key的数字c，有的话将数字c移动到数字b的位置，并将key值放到数字c位置</li>
+            <li>3.第一、二步的作用是将数据划分为较大数字集合及较小数字集合</li>
+            <li>4.重复处理在不断变小的集合内部排序直到无比较值</li>
+        </ul>
+    </div>
+    
+    <h2>动画演示 <span class="btn" id="play">开始</span><span class="btn" id="next">步进</span><!-- <span class="btn" id="replay">等待间隔时间后重试</span> --></h2>
+    <div>动画间隔时间<input type="text" id="animationTime" class="ipt ml20"  value="3500"><span class="btn" id="setTime">确定</span></div>
+    <div class="mt20">排序前array = [6,8,3,21,18,13,1,5,9,8,10]</div>
+    <div class="mt20">排序后array = [<span id="value"></span>]</div>
+    <div id="animationSort"></div>
+<div id="animationSort2"></div>
+    <script src="js/animationSort.js"></script>
+</body>
+</html>
