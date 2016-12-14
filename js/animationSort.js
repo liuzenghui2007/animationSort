@@ -1,3 +1,9 @@
+/*!
+ *
+ *  @author zhenhui
+ *  @下拉框模糊搜索组件
+ *  
+ */
 (function () {
     
     var drawSortProcess= function(id,arrayData){
