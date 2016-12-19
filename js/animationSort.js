@@ -143,8 +143,7 @@
                          moveLine : function(idx1,idx2){
                               var _t = this,
                                    fId = _t.el.id;
-                              
-                              //循环产生的变量污染，使用闭包解决
+                               
                               (function(){
                                       
                                     console.log(idx1+"===>"+idx2);  
